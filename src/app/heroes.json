@@ -11,7 +11,7 @@
     {  "id": 2,
       "name": "MCcree",
       "type" : "DPS",
-      "metaValue" : 0.4,
+      "metaValue" : 0.6,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -19,7 +19,7 @@
     {  "id": 3,
       "name": "Phara",
       "type" : "DPS",
-      "metaValue" : 0.4,
+      "metaValue" : 0.6,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -35,7 +35,7 @@
     {  "id": 5,
       "name": "Soldier:76",
       "type" : "DPS",
-      "metaValue" : 0.9,
+      "metaValue" : 0.7,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -43,7 +43,7 @@
     {  "id": 6,
       "name": "Sombra",
       "type" : "DPS",
-      "metaValue" : 0.3,
+      "metaValue" : 0.5,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -51,7 +51,7 @@
     {  "id": 7,
       "name": "Tracer",
       "type" : "DPS",
-      "metaValue" : 0.6,
+      "metaValue" : 0.5,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -67,7 +67,7 @@
     {  "id": 9,
       "name": "Hanzo",
       "type" : "DEFF",
-      "metaValue" : 0.6,
+      "metaValue" : 0.5,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -83,7 +83,7 @@
     {  "id": 11,
       "name": "Mei",
       "type" : "DEFF",
-      "metaValue" : 0.7,
+      "metaValue" : 0.6,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -99,7 +99,7 @@
     {  "id": 13,
       "name": "Widowmaker",
       "type" : "DEFF",
-      "metaValue" : 0.5,
+      "metaValue" : 0.4,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -107,7 +107,7 @@
     {  "id": 14,
       "name": "D.VA",
       "type" : "TANK",
-      "metaValue" : 0.9,
+      "metaValue" : 0.7,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -123,7 +123,7 @@
     {  "id": 16,
       "name": "Roadhog",
       "type" : "TANK",
-      "metaValue" : 0.9,
+      "metaValue" : 0.7,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -131,7 +131,7 @@
     {  "id": 17,
       "name": "Winston",
       "type" : "TANK",
-      "metaValue" : 0.5,
+      "metaValue" : 0.6,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -139,7 +139,7 @@
     {  "id": 18,
       "name": "Zarya",
       "type" : "TANK",
-      "metaValue" : 0.9,
+      "metaValue" : 0.7,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -147,7 +147,7 @@
     {  "id": 19,
       "name": "Ana",
       "type" : "HEAL",
-      "metaValue" : 0.9,
+      "metaValue" : 0.8,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -163,7 +163,7 @@
     {  "id": 21,
       "name": "Mercy",
       "type" : "HEAL",
-      "metaValue" : 0.8,
+      "metaValue" : 0.7,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
@@ -179,7 +179,7 @@
     {  "id": 23,
       "name": "Zenyatta",
       "type" : "HEAL",
-      "metaValue" : 0.8,
+      "metaValue" : 0.7,
       "isCounterBy": [],
       "counter":[],
       "img" : ""
