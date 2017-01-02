@@ -1,7 +1,19 @@
 <h1>
   {{title}}
 </h1>
-<div *ngFor="let hero of heroes">
-  <img attr.src="{{hero.img}}"/>
-  {{hero.name}}
-</div>
+    <md-grid-list cols="4">
+       <md-grid-tile *ngFor="let hero of heroes">
+    <md-card>
+      <md-card-title-group>
+       <img attr.src="{{hero.img}}">
+       <md-card-title>{{hero.name}}</md-card-title>
+       <md-card-subtitle>{{hero.type}}</md-card-subtitle>
+     </md-card-title-group>
+       <md-card-content>
+         <p>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         </p>
+       </md-card-content>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
