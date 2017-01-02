@@ -1,0 +1,29 @@
+{
+  "data": [
+    {  "id": 1,
+      "name": "Phara",
+      "type" : "DPS",
+      "metaValue" : 0.3,
+      "isCounterBy": [],
+      "counter":[],
+      "img" : ""
+    },
+    {  "id": 2,
+      "name": "Rein",
+      "type" : "Tank",
+      "metaValue" : 0.9,
+      "isCounterBy": [],
+      "counter":[],
+      "img" : ""
+    },
+    {  "id": 3,
+      "name": "Sombra",
+      "type" : "Tank",
+      "metaValue" : 0.2,
+      "isCounterBy": [],
+      "counter":[],
+      "img" : ""
+    }
+
+  ]
+}
