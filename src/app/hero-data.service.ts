@@ -7,7 +7,7 @@ import { Hero } from './hero';
 
 @Injectable()
 export class HeroDataService {
-  heroesUrl = "app/heroes.json"
+  heroesUrl = "assets/data/heroes.json"
   constructor(private http: Http) { }
 
   getHeroes(): Promise<Hero[]>{
