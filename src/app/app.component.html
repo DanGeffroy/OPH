@@ -1,6 +1,26 @@
 <h1>
   {{title}}
 </h1>
+
+<input ng2-auto-complete
+          [source]="heroes"
+          [(ngModel)]="selectedHero"
+          placeholder="enter text"
+          value-property-name="null"
+          display-property-name="name"/>
+
+<md-card *ngIf="selectedHero.id > 0">
+  <md-card-title-group>
+    <img attr.src="{{selectedHero.img}}">
+    <md-card-title>{{selectedHero.name}}</md-card-title>
+    <md-card-subtitle>{{selectedHero.type}}</md-card-subtitle>
+  </md-card-title-group>
+  <md-card-content>
+    <p>
+    {{selectedHero.text}}
+    </p>
+  </md-card-content>
+</md-card>
     <md-grid-list cols="4">
        <md-grid-tile *ngFor="let hero of heroes">
     <md-card>
@@ -11,7 +31,7 @@
      </md-card-title-group>
        <md-card-content>
          <p>
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           {{hero.text}}
          </p>
        </md-card-content>
     </md-card>

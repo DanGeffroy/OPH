@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
-
+import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 import 'hammerjs';
 
 @NgModule({
@@ -16,7 +16,8 @@ import 'hammerjs';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    Ng2AutoCompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
