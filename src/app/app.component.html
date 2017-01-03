@@ -28,7 +28,7 @@
     </md-card-title-group>
   </md-card>
   <h3 *ngIf="selectedHero.id > 0">To counter {{selectedHero.name}} you can pick :</h3>
-  <md-grid-list *ngIf="selectedHero.id > 0" cols="4">
+  <md-grid-list *ngIf="selectedHero.id > 0" cols="3" rowHeight="200px">
      <md-grid-tile *ngFor="let hero of selectedHero.isCounterBy">
   <md-card>
     <md-card-title-group>
@@ -44,7 +44,7 @@
   </md-card>
 </md-grid-tile>
 </md-grid-list>
-      <md-grid-list cols="4">
+      <md-grid-list cols="4" rowHeight="220px">
          <md-grid-tile *ngFor="let hero of heroes">
       <md-card>
         <md-card-title-group>
