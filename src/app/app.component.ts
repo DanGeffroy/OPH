@@ -9,7 +9,8 @@ import { HeroDataService} from './hero-data.service';
   providers: [HeroDataService ]
 })
 export class AppComponent {
-  title = 'app works!';
+  isDarkTheme: boolean = false;
+  title = 'OPH';
   heroes : Hero[];
   errorMessage: string;
   selectedHero: Hero =  {
