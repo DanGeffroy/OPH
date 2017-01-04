@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { Hero } from './hero';
 import { HeroDataService} from './hero-data.service';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [HeroDataService ]
+  providers: [HeroDataService ],
 })
 export class AppComponent {
   isDarkTheme: boolean = false;
