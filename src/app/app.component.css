@@ -1,6 +1,9 @@
 img {
     height: 100px;
 }
+md-sidenav-layout{
+  height: 100vh;
+}
 md-sidenav-layout.m2app-dark {
   background: black;
 }
@@ -73,4 +76,13 @@ md-sidenav-layout.m2app-dark {
 
 .app-progress {
   margin: 20px;
+}
+
+.simplebox {
+  outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  background-color: rgba(0, 0, 255, 0) !important;
 }

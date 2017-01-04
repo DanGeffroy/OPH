@@ -12,17 +12,16 @@
     <span class="app-toolbar-filler"></span>
     <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
   </md-toolbar>
-<div class="app-content">
-  <md-card>
-  <div class="input-group input-group-lg">
-  <input ng2-auto-complete
-            [source]="heroes"
-            [(ngModel)]="selectedHero"
-            placeholder="enter text"
-            value-property-name="null"
-            display-property-name="name"  class="form-control"/>
-</div>
-</md-card>
+  <div class="app-content">
+    <md-card class="app-input-section">
+      <md-input ng2-auto-complete
+                style="width:100%"
+                [source]="heroes"
+                [(ngModel)]="selectedHero"
+                placeholder="what hero do you wan't to counter?"
+                value-property-name="null"
+                display-property-name="name"></md-input>
+    </md-card>
 
 
   <md-card *ngIf="selectedHero.id > 0">
@@ -32,7 +31,9 @@
       <md-card-subtitle>{{selectedHero.type}}</md-card-subtitle>
     </md-card-title-group>
   </md-card>
-  <h3 *ngIf="selectedHero.id > 0">To counter {{selectedHero.name}} you can pick :</h3>
+  <md-card *ngIf="selectedHero.id > 0">
+    <label>To counter {{selectedHero.name}} you can pick :</label>
+  </md-card>
   <div class="row"  *ngIf="selectedHero.id > 0">
 
   <div class="col-sm-6 col-md-4" *ngFor="let hero of selectedHero.isCounterBy">
@@ -50,22 +51,6 @@
   </md-card>
   </div>
 </div>
-  <div class="row">
-    <div class="col-sm-6 col-md-4" *ngFor="let hero of heroes">
-      <md-card>
-        <md-card-title-group>
-         <img attr.src="{{hero.img}}">
-         <md-card-title>{{hero.name}}</md-card-title>
-         <md-card-subtitle>{{hero.type}}</md-card-subtitle>
-       </md-card-title-group>
-         <md-card-content>
-           <p>
-             {{hero.text}}
-           </p>
-         </md-card-content>
-      </md-card>
-    </div>
-    </div>
 </div>
 </md-sidenav-layout>
 
