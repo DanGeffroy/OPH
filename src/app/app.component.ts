@@ -44,7 +44,6 @@ export class AppComponent {
 
   }
   getMeta(){
-      console.log("in app")
       this.heroDataService.getMeta()
                           .then(
                             meta => this.meta = meta,
@@ -88,7 +87,6 @@ export class AppComponent {
 
       var keys = Object.keys(this.teamMeta);
       var largest = Math.max.apply(null, keys.map(x => this.teamMeta[x]));
-      console.log(largest);
       keys.reduce(
         (result, key) => {
           if (this.teamMeta[key] === largest){
