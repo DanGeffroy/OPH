@@ -19,7 +19,6 @@ export class HeroDataService {
               .catch(this.handleError);
   }
   getMeta(): Promise<Meta>{
-    console.log("in service")
     return this.http.get(this.metaUrl)
               .toPromise()
               .then(response => response.json() as Meta)

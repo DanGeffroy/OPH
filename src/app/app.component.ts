@@ -34,7 +34,7 @@ export class AppComponent {
       "metaValue" : 0, //0 to 1, closer to one better in the current meta the hero is
       "isCounterBy":null, //
       "counter": null,
-      "img" : "" // path to img
+      "img" : "assets/img/pick.png" // path to img
     };
     this.selectedHero = heroNull;
     this.teamHeroes = [];
@@ -58,7 +58,7 @@ export class AppComponent {
     }
 
     selectTeamHero(i){
-      let dialogRef = this._dialog.open(DialogContent);
+      let dialogRef = this._dialog.open(DialogContent,{disableClose:true});
 
       dialogRef.afterClosed().subscribe(result => {
         this.teamHeroes[i] = result;
@@ -101,13 +101,12 @@ export class AppComponent {
 }
 @Component({
   template: `
-    <p>This is a dialog</p>
-    <div class="col-sm-4 col-md-2" *ngFor="let hero of heroes">
-    <md-card (click)="dialogRef.close(hero)">
-      <a href="#" class="thumbnail">
-         <img attr.src="{{hero.img}}">
-      </a>
-    </md-card>
+    <div class="row">
+      <div class="col-md-2" *ngFor="let hero of heroes">
+        <div class="card" (click)="dialogRef.close(hero)">
+          <img class="card-img-top img-fluid" attr.src="{{hero.img}}" alt="Card image cap">
+        </div>
+      </div>
     </div>
   `,
   selector: 'modal',

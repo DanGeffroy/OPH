@@ -1,3 +1,17 @@
+h5{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.titles{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.md-tab-body-wrapper{
+  height: 500px;
+}
 md-sidenav-layout{
   height: 100vh;
 }
@@ -6,6 +20,19 @@ md-sidenav-layout.m2app-dark {
   color:white;
 }
 
+.m2app-dark .card{
+  background-color: #424242;
+}
+.m2app-dark .list-group{
+  background-color: #424242;
+}
+.m2app-dark ng2-auto-complete{
+  background-color: #424242;
+}
+
+.md-tab-body-active{
+  overflow-x: visible !important;
+}
 
 .app-content {
   padding: 20px;

@@ -16,64 +16,56 @@
 
   <md-tab-group>
     <md-tab label="Counter pick">
-      <md-card class="app-input-section">
-        <md-input ng2-auto-complete
-                  style="width:100%"
-                  [source]="heroes"
-                  [(ngModel)]="selectedHero"
-                  placeholder="what hero do you wan't to counter?"
-                  value-property-name="null"
-                  display-property-name="name"></md-input>
-      </md-card>
+      <div class="wrapper-overflowbug">
+        <md-card class="app-input-section">
+          <md-input ng2-auto-complete
+                    style="width:100%"
+                    [source]="heroes"
+                    [(ngModel)]="selectedHero"
+                    placeholder="what hero do you wan't to counter?"
+                    value-property-name="null"
+                    display-property-name="name"></md-input>
+        </md-card>
+        <div class="row">
+          <div class="col-md-4 titles" *ngIf="selectedHero.id > 0">
+                    <h5>To counter</h5>
+                    <h1>{{selectedHero.name}}</h1>
+                    <h5>you can pick</h5>
+            </div>
+          <div class="col-md-8">
+          <div class="row"  *ngIf="selectedHero.id > 0">
 
+          <div class="col-sm-6 col-md-4" *ngFor="let hero of selectedHero.isCounterBy">
+            <div class="card">
+              <img class="card-img-top img-fluid" attr.src="{{hero.img}}" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">{{hero.name}}</h4>
+                <p>{{hero.type}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
 
-    <md-card *ngIf="selectedHero.id > 0">
-      <md-card-title-group>
-        <img attr.src="{{selectedHero.img}}">
-        <md-card-title>{{selectedHero.name}}</md-card-title>
-        <md-card-subtitle>{{selectedHero.type}}</md-card-subtitle>
-      </md-card-title-group>
-    </md-card>
-    <md-card *ngIf="selectedHero.id > 0">
-      <label>To counter {{selectedHero.name}} you can pick :</label>
-    </md-card>
-    <div class="row"  *ngIf="selectedHero.id > 0">
-
-    <div class="col-sm-6 col-md-4" *ngFor="let hero of selectedHero.isCounterBy">
-    <md-card>
-      <md-card-title-group>
-       <img attr.src="{{hero.img}}">
-       <md-card-title>{{hero.name}}</md-card-title>
-       <md-card-subtitle>{{hero.type}}</md-card-subtitle>
-     </md-card-title-group>
-       <md-card-content>
-         <p>
-           {{hero.text}}
-         </p>
-       </md-card-content>
-    </md-card>
-    </div>
-  </div>
     </md-tab>
     <md-tab label="Team comp">
       <md-card *ngIf="meta">
         <p>The current meta is : {{meta.DPS}} DPS + {{meta.DEFF}} Defence hero + {{meta.TANK}} Tank + {{meta.HEAL}} Heal</p>
         <p>You need a {{neededType}}</p>
       </md-card>
-      <div class="col-sm-6 col-md-4" *ngFor="let teamHero of teamHeroes; let i = index">
-      <md-card>
-        <button md-raised-button (click)="selectTeamHero(i)">DIALOG</button>
-        <md-card-title-group>
-         <img attr.src="{{teamHero.img}}">
-         <md-card-title>{{teamHero.name}}</md-card-title>
-         <md-card-subtitle>{{teamHero.type}}</md-card-subtitle>
-       </md-card-title-group>
-         <md-card-content>
-           <p>
-             {{teamHero.text}}
-           </p>
-         </md-card-content>
-      </md-card>
+      <div class="col-sm-6 col-md-2" *ngFor="let teamHero of teamHeroes; let i = index">
+        <div class="card">
+          <img class="card-img-top img-fluid" attr.src="{{teamHero.img}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">{{teamHero.name}}</h4>
+          </div>
+          <div class="card-block">
+            <p>{{teamHero.type}}</p>
+            <button md-raised-button (click)="selectTeamHero(i)">CHANGE HERO</button>
+          </div>
+        </div>
       </div>
     </md-tab>
   </md-tab-group>
