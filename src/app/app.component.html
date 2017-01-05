@@ -56,7 +56,25 @@
   </div>
     </md-tab>
     <md-tab label="Team comp">
-      <p>soon ;)</p>
+      <md-card *ngIf="meta">
+        <p>The current meta is : {{meta.DPS}} DPS + {{meta.DEFF}} Defence hero + {{meta.TANK}} Tank + {{meta.HEAL}} Heal</p>
+        <p>You need a {{neededType}}</p>
+      </md-card>
+      <div class="col-sm-6 col-md-4" *ngFor="let teamHero of teamHeroes; let i = index">
+      <md-card>
+        <button md-raised-button (click)="selectTeamHero(i)">DIALOG</button>
+        <md-card-title-group>
+         <img attr.src="{{teamHero.img}}">
+         <md-card-title>{{teamHero.name}}</md-card-title>
+         <md-card-subtitle>{{teamHero.type}}</md-card-subtitle>
+       </md-card-title-group>
+         <md-card-content>
+           <p>
+             {{teamHero.text}}
+           </p>
+         </md-card-content>
+      </md-card>
+      </div>
     </md-tab>
   </md-tab-group>
 
