@@ -17,7 +17,8 @@
   <md-tab-group>
     <md-tab label="Counter pick">
       <div class="wrapper-overflowbug">
-        <md-card class="app-input-section">
+        <div class="card">
+          <div class="card-block">
           <md-input ng2-auto-complete
                     style="width:100%"
                     [source]="heroes"
@@ -25,7 +26,8 @@
                     placeholder="what hero do you wan't to counter?"
                     value-property-name="null"
                     display-property-name="name"></md-input>
-        </md-card>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-4 titles" *ngIf="selectedHero.id > 0">
                     <h5>To counter</h5>
@@ -35,7 +37,7 @@
           <div class="col-md-8">
           <div class="row"  *ngIf="selectedHero.id > 0">
 
-          <div class="col-sm-6 col-md-4" *ngFor="let hero of selectedHero.isCounterBy">
+          <div class="col-xs-6 col-md-4" *ngFor="let hero of selectedHero.isCounterBy">
             <div class="card">
               <img class="card-img-top img-fluid" attr.src="{{hero.img}}" alt="Card image cap">
               <div class="card-block">
@@ -51,19 +53,21 @@
 
     </md-tab>
     <md-tab label="Team comp">
-      <md-card *ngIf="meta">
-        <p>The current meta is : {{meta.DPS}} DPS + {{meta.DEFF}} Defence hero + {{meta.TANK}} Tank + {{meta.HEAL}} Heal</p>
-        <p>You need a {{neededType}}</p>
-      </md-card>
-      <div class="col-sm-6 col-md-2" *ngFor="let teamHero of teamHeroes; let i = index">
+      <div class="col-xs-6 col-md-2" *ngFor="let teamHero of teamHeroes; let i = index">
         <div class="card">
           <img class="card-img-top img-fluid" attr.src="{{teamHero.img}}" alt="Card image cap">
           <div class="card-block">
             <h4 class="card-title">{{teamHero.name}}</h4>
-          </div>
-          <div class="card-block">
             <p>{{teamHero.type}}</p>
-            <button md-raised-button (click)="selectTeamHero(i)">CHANGE HERO</button>
+            <button md-raised-button (click)="selectTeamHero(i)">CHANGE</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-12">
+        <div class="card" *ngIf="meta">
+          <div class="card-block">
+            <p>The current meta is : {{meta.DPS}} DPS + {{meta.DEFF}} Defence hero + {{meta.TANK}} Tank + {{meta.HEAL}} Heal</p>
+            <p>You need a {{neededType}}</p>
           </div>
         </div>
       </div>

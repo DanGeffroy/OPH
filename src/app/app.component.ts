@@ -100,7 +100,7 @@ export class AppComponent {
 @Component({
   template: `
     <div class="row">
-      <div class="col-md-2" *ngFor="let hero of heroes">
+      <div class="col-xs-4 col-md-2" *ngFor="let hero of heroes">
         <div class="card" (click)="dialogRef.close(hero)">
           <img class="card-img-top img-fluid" attr.src="{{hero.img}}" alt="Card image cap">
         </div>
