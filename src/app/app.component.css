@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+.app-title{
+  color:white;
+  font-family: 'Permanent Marker', cursive;
+}
 h5{
     text-align: center;
 }
@@ -14,6 +20,8 @@ h1{
 }
 .button-full-width{
   width: 100%;
+}
+.white-text{
   color: white;
 }
 .md-tab-body-wrapper{
@@ -54,7 +62,7 @@ md-sidenav-layout.m2app-dark {
 
 .app-sidenav {
   padding: 10px;
-  min-width: 100px;
+  min-width: 25%;
 }
 
 .app-content md-checkbox {

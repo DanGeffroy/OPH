@@ -13,7 +13,7 @@ import { Meta } from './meta';
 })
 export class AppComponent {
   isDarkTheme: boolean = false;
-  title = 'OPH';
+  title = 'OW pick';
   heroes : Hero[];
   errorMessage: string;
   selectedHero: Hero;
@@ -118,14 +118,10 @@ export class AppComponent {
     .card:hover{
       cursor:pointer;
     }
-    .m2app-dark .card{
-      background-color: #424242;
+    .card{
+      background-color: #CDDC39;
     }
-    .row{
-      margin-left : -24px;
-      margin-right : -24px;
-      background-color:black;
-    }
+
 
     `],
   selector: 'modal',

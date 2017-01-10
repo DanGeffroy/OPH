@@ -1,16 +1,21 @@
 <md-sidenav-layout [class.m2app-dark]="isDarkTheme">
   <md-sidenav #sidenav mode="side" class="app-sidenav">
-  Sidenav
+    <div class="row padding-top-20">
+      <a md-button class="button-full-width" target="_blank" href="https://github.com/DanGeffroy/">Link to my github <i class="fa fa-github fa-2x" aria-hidden="true"></i></a><br/>
+    </div>
+    <div class="row padding-top-20">
+      <a md-button class="button-full-width" target="_blank" href="https://github.com/DanGeffroy/OPH">Link to project repo <i class="fa fa-github fa-2x" aria-hidden="true"></i></a><br/>
+    </div>
 </md-sidenav>
-<md-toolbar color="primary">
+  <md-toolbar color="accent">
     <button class="app-icon-button" (click)="sidenav.toggle()">
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
 
-    {{title}}
+    <h1 class="app-title">{{title}}</h1>
 
-    <span class="app-toolbar-filler"></span>
-    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+    <span class="app-toolbar-filler"></span><!--
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>-->
   </md-toolbar>
   <div class="app-content">
 
@@ -22,7 +27,7 @@
 
           </div>
           <div class="col-md-4">
-             <button  class="button-full-width" md-raised-button color="accent" (click)="selectHeroToCounter()">CHANGE HERO</button>
+             <button  class="button-full-width white-text" md-raised-button color="primary" (click)="selectHeroToCounter()">CHANGE HERO</button>
           </div>
         </div>
         <div class="row padding-top-20">
@@ -56,7 +61,7 @@
           <div class="card-block">
             <h4 class="card-title">{{teamHero.name}}</h4>
             <p>{{teamHero.type}}</p>
-            <button class="button-full-width" color="accent" md-raised-button (click)="selectTeamHero(i)">CHANGE</button>
+            <button class="button-full-width white-text" color="primary" md-raised-button (click)="selectTeamHero(i)">CHANGE</button>
           </div>
         </div>
       </div>
