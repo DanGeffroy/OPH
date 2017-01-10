@@ -9,6 +9,13 @@ h1{
   padding-bottom: 10%;
 }
 
+.padding-top-20{
+    padding-top: 20px;
+}
+.button-full-width{
+  width: 100%;
+  color: white;
+}
 .md-tab-body-wrapper{
   height: 500px;
 }
@@ -22,6 +29,9 @@ md-sidenav-layout.m2app-dark {
 
 .m2app-dark .card{
   background-color: #424242;
+}
+.md-dialog-container{
+  background-color:black;
 }
 .m2app-dark .list-group{
   background-color: #424242;

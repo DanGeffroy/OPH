@@ -55,6 +55,13 @@ export class AppComponent {
                           heroes => this.heroes = heroes,
                           error =>  this.errorMessage = <any>error);
     }
+    selectHeroToCounter(){
+      let dialogRef = this._dialog.open(DialogContent,{disableClose:true});
+
+      dialogRef.afterClosed().subscribe(result => {
+        this.selectedHero = result;
+      })
+    }
 
     selectTeamHero(i){
       let dialogRef = this._dialog.open(DialogContent,{disableClose:true});
@@ -99,7 +106,7 @@ export class AppComponent {
 }
 @Component({
   template: `
-    <div class="row">
+    <div class="row" [class.m2app-dark]="isDarkTheme">
       <div class="col-xs-4 col-md-2" *ngFor="let hero of heroes">
         <div class="card" (click)="dialogRef.close(hero)">
           <img class="card-img-top img-fluid" attr.src="{{hero.img}}" alt="Card image cap">
@@ -107,15 +114,29 @@ export class AppComponent {
       </div>
     </div>
   `,
+  styles:[`
+    .card:hover{
+      cursor:pointer;
+    }
+    .m2app-dark .card{
+      background-color: #424242;
+    }
+    .row{
+      margin-left : -24px;
+      margin-right : -24px;
+      background-color:black;
+    }
+
+    `],
   selector: 'modal',
   providers: [HeroDataService]
 
 })
 export class DialogContent {
-
+  isDarkTheme: boolean = true;
   heroes : Hero[];
   errorMessage: string;
-  constructor(public dialogRef: MdDialogRef<DialogContent>,private heroDataService: HeroDataService,) {
+  constructor(public dialogRef: MdDialogRef<DialogContent>,private heroDataService: HeroDataService) {
     this.getHeroes();
   }
 
