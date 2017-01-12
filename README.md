@@ -3,6 +3,13 @@ Overwatch Pick Helper : a simple front-end app that tell you what hero you sould
 
 app is available <a target="_blank" href="http://owpick.tk/">here</a>
 
+## Functionality
+
+#### Counter pick
+What hero you sould play to counter another hero : Done
+#### Team comp
+The app suggest you the hero you should play according to your team composition : Almost done, by now it suggest you a type
+
 ## Preview
 <p align="center">
     <img src="preview.png" height="300">
