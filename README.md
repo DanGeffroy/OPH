@@ -1,7 +1,7 @@
 # OPH
 Overwatch Pick Helper : a simple front-end app that tell you what hero you sould pick in overwatch
 
-app is available <a target="_blank" href="http://owpick.tk/">here</a>
+app is available <a target="_blank" href="https://dangeffroy.github.io/OPH/">here</a>
 
 ## Functionality
 
